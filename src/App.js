@@ -46,7 +46,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("api/tickets")
+      .get("/api/tickets")
       .then(response => {
         const newTickets = response.data;
 
@@ -76,7 +76,6 @@ class App extends Component {
           >
             <Menu.Item key="1">Tickets</Menu.Item>
             <Menu.Item key="2">Contacts</Menu.Item>
-            <Menu.Item key="3">Opportunities</Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: "0 50px" }}>

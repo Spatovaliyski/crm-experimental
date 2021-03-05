@@ -1,73 +1,58 @@
-from flask import Flask
+from flask import Flask, request
+from flask import json
 from flask import jsonify
+from flask_cors import CORS
 from flask_restful import Api, Resource, reqparse
-
-app = Flask(__name__)
-api = Api(app)
 
 users = [
     {
         "id": 1,
         "firstname": "Martin",
-        "lastname": "Spatovaliyksi"
+        "lastname": "Test"
+    },
+    {
+        "id": 2,
+        "firstname": "Ivan",
+        "lastname": "Ivanov"
+    },
+
+    {
+        "id": 3,
+        "firstname": "Pesho",
+        "lastname": "Ivanov"
+    },
+
+    {
+        "id": 4,
+        "firstname": "Martin",
+        "lastname": "Test4123"
     },
 ]
 
-class Users(Resource):
-    def get(self):
-        return jsonify(users)
+app = Flask(__name__)
+api = Api(app)
+CORS(app)
 
-class User(Resource):
-    def get(self, name):
-        for user in users:
-            if(name == user["name"]):
-                return user, 200
-        return "User not found", 404
+parser = reqparse.RequestParser()
+parser.add_argument("id")
+parser.add_argument("lastname")
 
-    def post(self, name):
-        parser = reqparse.RequestParser()
-        parser.add_argument("age")
-        parser.add_argument("occupation")
-        args = parser.parse_args()
+@app.route('/api/tickets/', methods=["GET"])
+def getAllUsers():
+    return jsonify(users)
 
-        for user in users:
-            if(name == user["name"]):
-                return "User with name {} already exists".format(name), 400
+@app.route('/api/tickets/add/', methods=["POST"])
+def addUser():
+    json_data = request.get_json(force=True)
 
-        user = {
-            "id": args["age"],
-            "firstname": name,
-            "lastname": args["occupation"]
-        }
-        users.append(user)
-        return user, 201
+    user = {
+        "id": 7,
+        "firstname": json_data["firstname"],
+        "lastname": json_data["lastname"]
+    }
 
-    def put(self, name):
-        parser = reqparse.RequestParser()
-        parser.add_argument("age")
-        parser.add_argument("occupation")
-        args = parser.parse_args()
+    users.append(user)
 
-        for user in users:
-            if(name == user["name"]):
-                user["age"] = args["age"]
-                user["occupation"] = args["occupation"]
-                return user, 200
-        
-        user = {
-            "name": name,
-            "age": args["age"],
-            "occupation": args["occupation"]
-        }
-        users.append(user)
-        return user, 201
-
-    def delete(self, name):
-        global users
-        users = [user for user in users if user["name"] != name]
-        return "{} is deleted.".format(name), 200
-      
-api.add_resource(User, "/api/tickets/<string:name>")
-api.add_resource(Users, "/api/tickets/")
+    return user
 
 app.run(debug=True)
