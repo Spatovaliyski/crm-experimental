@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.nav-links {
+  display: inline-block;
+  list-style: none;
+  
+}
+
+.nav-links li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 1rem;
+}
