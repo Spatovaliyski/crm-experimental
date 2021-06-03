@@ -50,7 +50,7 @@ const Home = () => (
                 <Col span={6}>
                   <div className="statistics-box">
                     <div className="statistics-meta">
-                      <p>Profit</p>
+                      <h4>Profit</h4>
                       <h2>$1400</h2>
                       <span>Compare to last year (2019)</span>
                     </div>
@@ -59,7 +59,7 @@ const Home = () => (
                 <Col span={6}>
                   <div className="statistics-box">
                     <div className="statistics-meta">
-                      <p>Profit</p>
+                      <h4>Profit</h4>
                       <h2>$1400</h2>
                       <span>Compare to last year (2019)</span>
                     </div>
@@ -68,7 +68,7 @@ const Home = () => (
                 <Col span={6}>
                   <div className="statistics-box">
                     <div className="statistics-meta">
-                      <p>Profit</p>
+                      <h4>Profit</h4>
                       <h2>$1400</h2>
                       <span>Compare to last year (2019)</span>
                     </div>
@@ -77,7 +77,7 @@ const Home = () => (
                 <Col span={6}>
                   <div className="statistics-box">
                     <div className="statistics-meta">
-                      <p>Profit</p>
+                      <h4>Profit</h4>
                       <h2>$1400</h2>
                       <span>Compare to last year (2019)</span>
                     </div>

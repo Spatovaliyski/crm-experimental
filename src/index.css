@@ -33,11 +33,21 @@ body {
 }
 
 .statistics-meta {
-	padding: .5rem 1rem;
+	padding: 1.5rem;
 }
 
-.statistics-meta p {
-	margin-bottom: .25rem;
+.statistics-meta h4 {
+	font-size: 17px;
+}
+
+.statistics-meta h2 {
+	font-size: 1.875rem;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.statistics-meta span {
+	color: #72849a;
 }
 
 .ant-layout-sider.site-layout-background {
