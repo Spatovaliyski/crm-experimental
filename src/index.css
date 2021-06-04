@@ -324,3 +324,17 @@ body .ant-layout {
 .faq-item:last-child {
 	border: none;
 }
+
+.ant-layout .ant-btn-primary {
+	border: 1px solid rgba(59, 105, 240, 0.4);
+    background: linear-gradient(97.67deg, rgba(161, 201, 254, 0.4) 0%, rgba(161, 201, 254, 0) 100%), #3e6ffd;
+    background-blend-mode: overlay, normal;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgb(13 24 58 / 20%);
+	transition: .2s ease;
+}
+
+.ant-layout .ant-btn-primary:hover {
+	background: linear-gradient(97.67deg, rgba(161, 201, 254, 0.8) 0%, rgba(161, 201, 254, 0) 100%), #3e6ffd;
+	color: #fff;
+}
