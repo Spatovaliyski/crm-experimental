@@ -8,24 +8,13 @@ const { Header, Content, Footer, Sider } = Layout;
 const DefaultLayout = ({ children }) => {
     return(
     <Layout>
-        <Header>
+        <Content className="main-default">                
+            {children}
 
-        </Header>
-
-        <Layout>
-            <Sider className="site-layout-background">
-
-            </Sider>
-            
-            <Content>
-                {children}
-
-                <Footer>
-                    <div><span>Copyright &copy; 2021 - Martin's CRM</span></div>
-                </Footer>
-            </Content>
-            
-        </Layout>
+            <Footer>
+                <div><span>Copyright &copy; 2021 - Martin's CRM</span></div>
+            </Footer>
+        </Content>
     </Layout>
     );
 }

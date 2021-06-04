@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	background: #f7f8fc;
+	font-family: 'Roboto' !important;
 }
 
 .nav-links {
@@ -15,11 +18,22 @@ body {
 	margin-right: 1.5rem;
 }
 
+.nav-links a li {
+	color: #03082e;
+	opacity: .6;
+	transition: .2s ease;
+}
+
+.nav-links a li:hover {
+	opacity: 1;
+}
+
 .statistics-box {
 	display: flex;
 	flex-flow: row wrap;
 	border-radius: 4px;
-	background-color: #f0f2f5;
+	background-color: #FFF;
+	border: 1px solid #e1e4e8;
 	color: #1a3353;
 }
 
@@ -44,15 +58,25 @@ body {
 	font-size: 1.875rem;
 	font-weight: bold;
 	margin-bottom: 0;
+	color: #3e6ffd;
 }
 
 .statistics-meta span {
 	color: #72849a;
 }
 
+body .ant-layout {
+	background: #f7f8fc;
+}
+
 .ant-layout-sider.site-layout-background {
 	background: #FFF;
 	box-shadow: 0 1px 4px -1px rgb(0 0 0 / 15%)
+}
+
+.ant-layout .main .ant-layout {
+	border-radius: 4px;
+	border: 1px solid #e1e4e8;
 }
 
 .ant-layout-content .ant-layout-footer {
@@ -61,4 +85,99 @@ body {
 	padding: 24px 16px;
 	background: #FFF;
 	border-top: 1px solid #eaeaea;
+}
+
+.ant-layout .ant-layout-header {
+	background: #FFF;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 24px;
+}
+
+.ant-layout .logo {
+	color: #3e6ffd;
+	background: linear-gradient(97.67deg, rgba(161, 201, 254, 0.4) 0%, rgba(161, 201, 254, 0) 100%), #3E6FFD;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
+	font-size: 20px;
+}
+
+.ant-layout.page-title-strip {
+	box-shadow: 0px 2px 4px rgb(3 8 46 / 10%);
+	margin-bottom: 2.5em;
+	background: #FFF;
+	border-top: 1px solid #e7e8ec;
+} 
+
+.ant-breadcrumb span {
+	color: #03082e;
+	font-size: 24px;
+}
+
+.ant-layout-content .ant-layout-footer {
+	margin: 0;
+	margin-top: 2em;
+}
+
+.home-updates {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.home-updates .home-content {
+	padding-right: 2.5em;
+}
+
+.deals-sidebar {
+	background: #FFF;
+	border: 1px solid #e1e4e8;
+	padding: 1em;
+	border-radius: 4px;
+}
+
+.main-default {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+
+.container {
+	flex: 1;
+}
+
+.button {
+	display: inline-flex;
+    align-items: center;
+    padding: 0.645em 1em;
+    border: 1px solid 1px solid rgba(16, 19, 39, 0.05);
+    border-radius: 4px;
+    background: none;
+    line-height: 1.45;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: #03082e;
+}
+
+.button-primary {
+	border: 1px solid rgba(59, 105, 240, 0.4);
+    background: linear-gradient(97.67deg, rgba(161, 201, 254, 0.4) 0%, rgba(161, 201, 254, 0) 100%), #3e6ffd;
+    background-blend-mode: overlay, normal;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgb(13 24 58 / 20%);
+	transition: .2s ease;
+}
+
+.button-primary:hover {
+	background: linear-gradient(97.67deg, rgba(161, 201, 254, 0.8) 0%, rgba(161, 201, 254, 0) 100%), #3e6ffd;
+	color: #fff;
+}
+
+.tickets-link {
+	width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .65em 0;
 }

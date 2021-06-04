@@ -67,36 +67,42 @@ class App extends Component {
 
   render() {
     return (
-      <Layout>
-        <Content style={{ padding: "0 50px" }}>
-          <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>Tickets</Breadcrumb.Item>
-          </Breadcrumb>
-          <Layout style={{ padding: "24px 0", background: "#fff" }}>
-            <Content style={{ padding: "0 24px", minHeight: 525 }}>
-              <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
-                <Row type="flex" justify="end" style={{ marginBottom: 10 }}>
-                  <ModalFormButton
-                    buttonText="Create New Ticket"
-                    title="Title"
-                    myFunc={this.handleChildFunc.bind(this)}
-                  />
-                </Row>
+      <div>
+        <Layout className="page-title-strip">
+          <Content style={{ padding: "0 24px"}}>
+              <Breadcrumb style={{ margin: "16px 0" }}>
+                  <Breadcrumb.Item>Tickets</Breadcrumb.Item>
+              </Breadcrumb>
+          </Content>
+        </Layout>
 
-                <Row>
-                  <Col>
-                    <TicketsTable
-                      dataSource={this.state.tickets}
-                      columns={columns}
+        <Layout>
+          <Content className="main" style={{ margin: "0 50px" }}>
+            <Layout style={{ padding: "24px 0", background: "#fff" }}>
+              <Content style={{ padding: "0 24px", minHeight: 525 }}>
+                <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
+                  <Row type="flex" justify="end" style={{ marginBottom: 10 }}>
+                    <ModalFormButton
+                      buttonText="Create New Ticket"
+                      title="Title"
+                      myFunc={this.handleChildFunc.bind(this)}
                     />
-                  </Col>
-                </Row>
-              </div>
-            </Content>
-          </Layout>
-        </Content>
-      </Layout>
+                  </Row>
+
+                  <Row>
+                    <Col>
+                      <TicketsTable
+                        dataSource={this.state.tickets}
+                        columns={columns}
+                      />
+                    </Col>
+                  </Row>
+                </div>
+              </Content>
+            </Layout>
+          </Content>
+        </Layout>
+      </div>
     );
   }
 }

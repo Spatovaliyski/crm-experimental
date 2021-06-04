@@ -33,70 +33,86 @@ class App extends Component {
 }
 
 const Home = () => (
-  <div>
+  <div className="container">
+    <Layout className="page-title-strip">
+        <Content style={{ padding: "0 24px"}}>
+            <Breadcrumb style={{ margin: "16px 0" }}>
+                <Breadcrumb.Item>Home</Breadcrumb.Item>
+            </Breadcrumb>
+        </Content>
+    </Layout>
+
     <Layout>
-      <Content style={{ padding: "0 50px" }}>
-        <Breadcrumb style={{ margin: "16px 0" }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-        </Breadcrumb>
-        <Layout style={{ padding: "24px 0", background: "#fff" }}>
-          <Content style={{ padding: "0 24px", minHeight: 525 }}>
-            <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
-              <Row type="flex" justify="end" style={{ marginBottom: 10 }}>
-                
-              </Row>
+      <Layout className="home-updates">
+        <Content className="home-content">
+          <Layout>
+            <Content>
+              <div className="home-container">
+                <Row gutter={24}>
+                  <Col span={6}>
+                    <div className="statistics-box">
+                      <div className="statistics-meta">
+                        <h4>Profit</h4>
+                        <h2>$1400</h2>
+                        <span>Compared to last year (2020)</span>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col span={6}>
+                    <div className="statistics-box">
+                      <div className="statistics-meta">
+                        <h4>Profit</h4>
+                        <h2>$1400</h2>
+                        <span>Compared to last year (2020)</span>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col span={6}>
+                    <div className="statistics-box">
+                      <div className="statistics-meta">
+                        <h4>Profit</h4>
+                        <h2>$1400</h2>
+                        <span>Compared to last year (2020)</span>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col span={6}>
+                    <div className="statistics-box">
+                      <div className="statistics-meta">
+                        <h4>Profit</h4>
+                        <h2>$1400</h2>
+                        <span>Compared to last year (2020)</span>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
 
-              <Row gutter={32}>
-                <Col span={6}>
-                  <div className="statistics-box">
-                    <div className="statistics-meta">
-                      <h4>Profit</h4>
-                      <h2>$1400</h2>
-                      <span>Compare to last year (2019)</span>
-                    </div>
-                  </div>
-                </Col>
-                <Col span={6}>
-                  <div className="statistics-box">
-                    <div className="statistics-meta">
-                      <h4>Profit</h4>
-                      <h2>$1400</h2>
-                      <span>Compare to last year (2019)</span>
-                    </div>
-                  </div>
-                </Col>
-                <Col span={6}>
-                  <div className="statistics-box">
-                    <div className="statistics-meta">
-                      <h4>Profit</h4>
-                      <h2>$1400</h2>
-                      <span>Compare to last year (2019)</span>
-                    </div>
-                  </div>
-                </Col>
-                <Col span={6}>
-                  <div className="statistics-box">
-                    <div className="statistics-meta">
-                      <h4>Profit</h4>
-                      <h2>$1400</h2>
-                      <span>Compare to last year (2019)</span>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
+                <Row gutter={32} style={{margin: "2.5em 0", background: "#FFF"}}>
+                  <Col span={12}>
+                    Test
+                  </Col>
+                  <Col span={12}>
+                    Test
+                  </Col>
+                </Row>
+              </div>
+            </Content>
+          </Layout>
+        </Content>
 
-              <Row gutter={32}>
-                <Col span={12}>
-                  Test
-                </Col>
-                <Col span={12}>
-                  Test
-                </Col>
-              </Row>
+        <Sider className="home-sidebar" width="300" style={{ background: "transparent"}}>
+          <aside class="sidebar deals-sidebar">
+            <div class="tile">
+              <h1 class="title">Hi, Admin</h1>
+              <p class="subtitle">Welcome to your personalized portal</p>
             </div>
-          </Content>
-        </Layout>
-      </Content>
+            <div class="tile">
+              <p>Submit your ticket information with us. <br />We will follow up with marketing and sales support to help you close the business.</p>
+              <a href="#" class="tickets-link button button-primary button-with-icon icon-cloud-upload">View Tickets</a>
+            </div>
+          </aside>
+        </Sider>
+      </Layout>
     </Layout>
   </div>
 );
