@@ -49,50 +49,81 @@ const Home = () => (
             <Content>
               <div className="home-container">
                 <Row gutter={24}>
-                  <Col span={6}>
+                  <Col span={8}>
                     <div className="statistics-box">
                       <div className="statistics-meta">
-                        <h4>Profit</h4>
-                        <h2>$1400</h2>
+                        <h4>Revenue</h4>
+                        <h2>$2,454</h2>
                         <span>Compared to last year (2020)</span>
                       </div>
                     </div>
                   </Col>
-                  <Col span={6}>
+                  <Col span={8}>
                     <div className="statistics-box">
                       <div className="statistics-meta">
-                        <h4>Profit</h4>
-                        <h2>$1400</h2>
+                        <h4>Sales</h4>
+                        <h2>$6,982</h2>
                         <span>Compared to last year (2020)</span>
                       </div>
                     </div>
                   </Col>
-                  <Col span={6}>
+                  <Col span={8}>
                     <div className="statistics-box">
                       <div className="statistics-meta">
-                        <h4>Profit</h4>
-                        <h2>$1400</h2>
-                        <span>Compared to last year (2020)</span>
-                      </div>
-                    </div>
-                  </Col>
-                  <Col span={6}>
-                    <div className="statistics-box">
-                      <div className="statistics-meta">
-                        <h4>Profit</h4>
-                        <h2>$1400</h2>
+                        <h4>Costs</h4>
+                        <h2>$8,310</h2>
                         <span>Compared to last year (2020)</span>
                       </div>
                     </div>
                   </Col>
                 </Row>
 
-                <Row gutter={32} style={{margin: "2.5em 0", background: "#FFF"}}>
-                  <Col span={12}>
-                    Test
-                  </Col>
-                  <Col span={12}>
-                    Test
+                <Row gutter={32} style={{}}>
+                  <Col span={24}>
+                    <div className="newsfeed">
+                      <div className="newsfeed-post">
+                        <h2 className="newsfeed-title">Lorem Ipsum</h2>
+                        <span className="newsfeed-posted">06 Jun, 2021</span>
+                        <div className="newsfeed-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </div>
+                      </div>
+
+                      <div className="newsfeed-post">
+                        <h2 className="newsfeed-title">Lorem Ipsum</h2>
+                        <span className="newsfeed-posted">05 Jun, 2021</span>
+                        <div className="newsfeed-content">
+                          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, <br />nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                        </div>
+                      </div>
+
+                      <div className="newsfeed-post">
+                        <h2 className="newsfeed-title">Lorem Ipsum</h2>
+                        <span className="newsfeed-posted">04 Jun, 2021</span>
+                        <div className="newsfeed-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </div>
+                      </div>
+
+                      <div className="newsfeed-post">
+                        <h2 className="newsfeed-title">Lorem Ipsum</h2>
+                        <span className="newsfeed-posted">03 Jun, 2021</span>
+                        <div className="newsfeed-content">
+                          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, <br />nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                        </div>
+                      </div>
+
+                      <div className="newsfeed-post">
+                        <h2 className="newsfeed-title">Lorem Ipsum</h2>
+                        <span className="newsfeed-posted">02 Jun, 2021</span>
+                        <div className="newsfeed-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </div>
+                      </div>
+                    </div>
                   </Col>
                 </Row>
               </div>

@@ -18,7 +18,6 @@ function Nav() {
                         <Link to='/'><li>Home</li></Link>
                         <Link to='/Tickets'><li>Tickets</li></Link>
                         <Link to='/Contact'><li>Contact</li></Link>
-                        <Link to='/Statistics'><li>Statistics</li></Link>
                     </ul>
                 </nav>
                 

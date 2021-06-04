@@ -46,7 +46,7 @@ def addUser():
     json_data = request.get_json(force=True)
 
     user = {
-        "id": 7,
+        "id": len(users) + 1,
         "firstname": json_data["firstname"],
         "lastname": json_data["lastname"]
     }

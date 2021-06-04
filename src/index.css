@@ -113,6 +113,7 @@ body .ant-layout {
 .ant-breadcrumb span {
 	color: #03082e;
 	font-size: 24px;
+	font-weight: 300;
 }
 
 .ant-layout-content .ant-layout-footer {
@@ -121,7 +122,7 @@ body .ant-layout {
 }
 
 .home-updates {
-	max-width: 1600px;
+	max-width: 1100px;
 	margin: 0 auto;
 }
 
@@ -134,6 +135,9 @@ body .ant-layout {
 	border: 1px solid #e1e4e8;
 	padding: 1em;
 	border-radius: 4px;
+
+	position: sticky;
+    top: 1.5rem;
 }
 
 .main-default {
@@ -180,4 +184,143 @@ body .ant-layout {
     align-items: center;
     justify-content: center;
     padding: .65em 0;
+}
+
+.newsfeed {
+	margin: 2em 0;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.newsfeed-post {
+	padding: 1.5em;
+	display: block;
+
+	margin-bottom: 2em;
+    border-radius: 4px;
+    background-color: #FFF;
+    border: 1px solid #e1e4e8;
+    transition: .2s ease;;
+}
+
+.newsfeed-post:last-child {
+	margin-bottom: 0;
+}
+
+.newsfeed-title {
+	color: #24292e;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+	margin-bottom: 0;
+}
+
+.newsfeed-content {
+	color: #444d56;
+    line-height: 1.6;
+    margin: 1em 0;
+}
+
+.newsfeed-posted {
+	font-size: 0.75rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #959da5;
+}
+
+.container.contact .page-title-strip {
+	margin-bottom: 0;
+}
+
+.search {
+	text-align: center;
+	width: 100%;
+}
+
+.search h2 {
+	color: #FFF;
+	opacity: .6;
+}
+
+.search input {
+	background: #FFF;
+	border: 1px solid #405cad;
+	border-radius: 6px;
+	padding: .75rem 1em;
+	width: 100%;
+	max-width: 360px;
+	color: #03082e;
+}
+
+.search input::placeholder {
+	color: #03082e;
+	opacity: .6;
+}
+
+.search input:focus {
+	outline: none;
+}
+
+.search-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 4rem;
+}
+
+.faq-boxes {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: -6em;
+}
+
+.faq-box {
+	background: #FFF;
+	box-shadow: 0 0 6px -4px #000;
+	border-radius: 4px;
+	text-align: center;
+	margin: 0 1rem;
+	padding: 2rem 6em;
+}
+
+.faq-box a {
+	display: block;
+}
+
+.faq-box a:focus {
+	outline: none;
+}
+
+.faq-box img {
+	margin-bottom: 1rem;
+	transition: .2s ease;
+}
+
+.faq-box .faq-title {
+	font-weight: 300;
+}
+
+.faq-box:hover img {
+	transform: translateY(-10px);
+}
+
+.faq-list {
+	background: white;
+    border: 1px solid #e1e4e8;
+	max-width: 1084px;
+	margin: 0 auto;
+	padding: 3em;
+	margin-top: 3em
+}
+
+.faq-item {
+	border-bottom: 1px solid #e1e4e8;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+.faq-item:last-child {
+	border: none;
 }

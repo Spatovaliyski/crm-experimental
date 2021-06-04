@@ -67,7 +67,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <Layout className="page-title-strip">
           <Content style={{ padding: "0 24px"}}>
               <Breadcrumb style={{ margin: "16px 0" }}>
