@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+
 import "./App.css";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import { Row, Col } from "antd";
@@ -7,13 +8,21 @@ import Tickets from './Tickets';
 import Statistics from './Statistics';
 import Nav from './Nav';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import DefaultLayout from './components/layouts/default'
+import DefaultLayout from './components/layouts/default';
+import useToken from './components/tokens/useToken';
+import Login from './components/login/Login';
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
-class App extends Component {
-  render() {
+function App() {
+
+    const { token, setToken } = useToken();
+    
+    if(!token) {
+      return <Login setToken={setToken} />
+    }
+    
     return (
       <DefaultLayout>
         <Router>
@@ -24,13 +33,13 @@ class App extends Component {
               <Route path="/Contact" component={Contact} />    
               <Route path="/Tickets" component={Tickets} />
               <Route path="/Statistics" component={Statistics} />
+              <Route path="/Login" component={Login} />
             </Switch>
         </Router>
 
       </DefaultLayout>
     );
   }
-}
 
 const Home = () => (
   <div className="container">
