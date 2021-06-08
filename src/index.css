@@ -10,12 +10,13 @@ body {
 .nav-links {
 	display: inline-block;
 	list-style: none;
+	padding-left: .25rem;
 }
 
 .nav-links li {
 	display: inline-block;
 	list-style-type: none;
-	margin-right: 1.5rem;
+	padding: 0 1rem;
 }
 
 .nav-links a li {
@@ -26,6 +27,18 @@ body {
 
 .nav-links a li:hover {
 	opacity: 1;
+    outline: none;
+    background-color: #f6f8fa;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.account-panel li {
+	list-style: none;
 }
 
 .statistics-box {
@@ -140,6 +153,10 @@ body .ant-layout {
     top: 1.5rem;
 }
 
+.sidebar .title {
+	font-size: 1rem;
+}
+
 .main-default {
 	display: flex;
 	flex-flow: column;
@@ -161,6 +178,8 @@ body .ant-layout {
     font-size: 0.875em;
     font-weight: bold;
     color: #03082e;
+	cursor: pointer;
+	transition: .1s ease;
 }
 
 .button-primary {
@@ -170,6 +189,10 @@ body .ant-layout {
     color: #ffffff;
     box-shadow: 0px 1px 2px rgb(13 24 58 / 20%);
 	transition: .2s ease;
+}
+
+.button-login {
+	padding: .643rem 2rem;
 }
 
 .button-primary:hover {
@@ -337,4 +360,39 @@ body .ant-layout {
 .ant-layout .ant-btn-primary:hover {
 	background: linear-gradient(97.67deg, rgba(161, 201, 254, 0.8) 0%, rgba(161, 201, 254, 0) 100%), #3e6ffd;
 	color: #fff;
+}
+
+.auth-form input {
+	background: #FFF;
+    border: 1px solid #d1d5da;
+    padding: 0.5em 1em;
+    width: 100%;
+    transition: .2s ease;
+    font-size: 1em;
+    font-weight: normal;
+    border-radius: 4px;
+    height: 2.5em;
+}
+
+.auth-form input:focus {
+    outline: 0;
+    border: 1px solid #0580FC;
+    caret-color: #0580FC;
+}
+
+.auth-form label {
+	margin-bottom: .25rem;
+	display: block;
+	color: #565656;
+	font-weight: 500;
+	font-size: 13px;
+}
+
+.auth-form {
+	max-width: 260px;
+	width: 100%;
+}
+
+.auth-field {
+	margin-bottom: 1.5rem;
 }

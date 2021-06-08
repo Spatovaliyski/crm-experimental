@@ -9,8 +9,10 @@ import Statistics from './Statistics';
 import Nav from './Nav';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import DefaultLayout from './components/layouts/default';
+import IntroLayout from './components/layouts/intro';
 import useToken from './components/tokens/useToken';
 import Login from './components/login/Login';
+import Logout from './components/login/Logout';
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -20,7 +22,11 @@ function App() {
     const { token, setToken } = useToken();
     
     if(!token) {
-      return <Login setToken={setToken} />
+      return (
+        <IntroLayout>
+          <Login setToken={setToken} />
+        </IntroLayout>
+      );
     }
     
     return (
@@ -34,6 +40,7 @@ function App() {
               <Route path="/Tickets" component={Tickets} />
               <Route path="/Statistics" component={Statistics} />
               <Route path="/Login" component={Login} />
+              <Route path="/Logout" component={Logout} />
             </Switch>
         </Router>
 

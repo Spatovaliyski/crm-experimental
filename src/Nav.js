@@ -13,13 +13,19 @@ function Nav() {
             <div className="logo">Martin's CRM</div>
         
 
-                <nav>
+                <nav className="nav-container">
                     <ul className="nav-links">
                         <Link to='/'><li>Home</li></Link>
                         <Link to='/Tickets'><li>Tickets</li></Link>
                         <Link to='/Contact'><li>Contact</li></Link>
                     </ul>
+
+                    <ul className="account-panel">
+                        <Link to="/Logout"><li>Logout</li></Link>
+                    </ul>
                 </nav>
+
+                
                 
                 {/* <Menu
                     theme="dark"
