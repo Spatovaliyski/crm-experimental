@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Image } from "react";
 import update from "immutability-helper";
 import ModalFormButton from "./components/tickets/ModalFormButton";
 import TicketsTable from "./components/tickets/TicketsTable";
@@ -9,10 +9,25 @@ import { Row, Col } from "antd";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import DefaultLayout from './components/layouts/default';
 
+
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
+
+// const displayAvatar = (avatar) => {
+//   const baseUrl = "./src/assets/img/";
+//   const imageName = require(baseUrl + avatar);
+
+//   return <img src={imageName} />
+// }
+
 const columns = [
+  {
+    title: "Avatar",
+    dataIndex: "avatar",
+    key: "avatar",
+    //render: displayAvatar
+  },
   {
     title: "Ticket ID",
     dataIndex: "id",
@@ -27,7 +42,22 @@ const columns = [
     title: "Last Name",
     dataIndex: "lastname",
     key: "lastname"
-  }
+  },
+  {
+    title: "Mobile Phone",
+    dataIndex: "mobile",
+    key: "mobile"
+  },
+  {
+    title: "Email",
+    dataIndex: "email",
+    key: "email"
+  },
+  {
+    title: "Membership",
+    dataIndex: "membership",
+    key: "membership"
+  },
 ];
 
 class App extends Component {

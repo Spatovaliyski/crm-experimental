@@ -3,31 +3,13 @@ from flask import json
 from flask import jsonify
 from flask_cors import CORS
 from flask_restful import Api, Resource, reqparse
+import os
 
-users = [
-    {
-        "id": 1,
-        "firstname": "Martin",
-        "lastname": "Test"
-    },
-    {
-        "id": 2,
-        "firstname": "Ivan",
-        "lastname": "Ivanov"
-    },
+SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+json_url = os.path.join(SITE_ROOT, 'static', '../data.json')
+data = json.load(open(json_url))
 
-    {
-        "id": 3,
-        "firstname": "Pesho",
-        "lastname": "Ivanov"
-    },
-
-    {
-        "id": 4,
-        "firstname": "Martin",
-        "lastname": "Test4123"
-    },
-]
+customers = data['customers']
 
 app = Flask(__name__)
 api = Api(app)
@@ -39,19 +21,22 @@ parser.add_argument("lastname")
 
 @app.route('/api/tickets/', methods=["GET"])
 def getAllUsers():
-    return jsonify(users)
+    return jsonify(customers)
 
 @app.route('/api/tickets/add/', methods=["POST"])
 def addUser():
     json_data = request.get_json(force=True)
 
     user = {
-        "id": len(users) + 1,
+        "id": len(customers) + 1,
         "firstname": json_data["firstname"],
-        "lastname": json_data["lastname"]
+        "lastname": json_data["lastname"],
+        "mobile": json_data["mobile"],
+        "email": json_data["email"],
+        "membership": 0,
     }
 
-    users.append(user)
+    customers.append(user)
 
     return user
 

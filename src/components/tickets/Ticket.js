@@ -6,7 +6,7 @@ import Button from 'antd/lib/button';
 function Ticket(props) {
   return (<div className="ticket">
       <span> <Button type="primary">{props.firstname}</Button> </span>
-      <span>{props.firstname} {props.lastname}</span>
+      <span>{props.firstname} {props.lastname} {props.mobile}</span>
     </div>
   );
 }

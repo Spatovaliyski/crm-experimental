@@ -54,9 +54,11 @@ class ModalFormButton extends React.Component {
       <div>
         <Button type="primary" onClick={this.showModal}>{this.props.buttonText}</Button>
         <ModalForm
-          title = "New Title"
+          title = "Add new Ticket"
           item1Title = "First Name"
           item2Title = "Last Name"
+          item3Title = "Phone Number"
+          item4Title = "Email"
           wrappedComponentRef={this.saveFormRef}
           visible={this.state.visible}
           onCancel={this.handleCancel}

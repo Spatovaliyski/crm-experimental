@@ -53,9 +53,7 @@ class TicketsTable extends React.Component {
             onClick={this.start}
             disabled={!hasSelected}
             loading={loading}
-          >
-            Delete
-          </Button>
+          >Delete</Button>
           <span style={{ marginLeft: 8 }}>
             {hasSelected ? `Selected ${selectedRowKeys.length} items` : ""}
           </span>

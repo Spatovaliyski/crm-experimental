@@ -148,14 +148,14 @@ const Home = () => (
         </Content>
 
         <Sider className="home-sidebar" width="300" style={{ background: "transparent"}}>
-          <aside class="sidebar deals-sidebar">
-            <div class="tile">
-              <h1 class="title">Hi, Admin</h1>
-              <p class="subtitle">Welcome to your personalized portal</p>
+          <aside className="sidebar deals-sidebar">
+            <div className="tile">
+              <h1 className="title">Hi, Admin</h1>
+              <p className="subtitle">Welcome to your personalized portal</p>
             </div>
-            <div class="tile">
+            <div className="tile">
               <p>Submit your ticket information with us. <br />We will follow up with marketing and sales support to help you close the business.</p>
-              <a href="#" class="tickets-link button button-primary button-with-icon icon-cloud-upload">View Tickets</a>
+              <a href="#" className="tickets-link button button-primary button-with-icon icon-cloud-upload">View Tickets</a>
             </div>
           </aside>
         </Sider>

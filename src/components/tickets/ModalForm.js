@@ -27,6 +27,18 @@ const ModalForm = Form.create()(
                 rules: [{ required: true, message: "Field is required!" }]
               })(<Input type="textarea" />)}
             </FormItem>
+
+            <FormItem label={this.props.item3Title}>
+              {getFieldDecorator("mobile", {
+                rules: [{ required: true, message: "Field is required!" }]
+              })(<Input type="textarea" />)}
+            </FormItem>
+
+            <FormItem label={this.props.item2Title}>
+              {getFieldDecorator("email", {
+                rules: [{ required: true, message: "Field is required!" }]
+              })(<Input type="textarea" />)}
+            </FormItem>
           </Form>
         </Modal>
       );
