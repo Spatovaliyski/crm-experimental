@@ -389,10 +389,48 @@ body .ant-layout {
 }
 
 .auth-form {
-	max-width: 260px;
 	width: 100%;
 }
 
 .auth-field {
 	margin-bottom: 1.5rem;
+}
+
+.login-title {
+    background: linear-gradient(97.67deg, rgba(161, 201, 254, 0.4) 0%, rgba(161, 201, 254, 0) 100%), #3E6FFD;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
+    color: #3e6ffd;
+    font-size: 2rem;
+    margin-top: 0.1em;
+    margin-bottom: 1.75rem;
+}
+
+.login-box {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.login-container {
+	max-width: 320px;
+	width: 100%;
+}
+
+.login-half {
+	display: flex;
+	justify-content: center;
+	flex: 0 0 50%;
+}
+
+.wrong-credentials {
+	color: rgb(189, 46, 46);
+	font-size: .75rem;
+	margin-top: 1em;
+	display: none;
+}
+
+.wrong-credentials.is-visible {
+	display: block;
 }
