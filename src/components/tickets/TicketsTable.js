@@ -15,7 +15,7 @@ class TicketsTable extends React.Component {
     };
     console.log(ticketsToDelete);
     axios
-      .post("api/tickets/delete", ticketsToDelete)
+      .post("api/tickets/delete/", ticketsToDelete)
       .then(response => {
         console.log(response);
         this.setState({
