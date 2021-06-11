@@ -157,7 +157,7 @@ body .ant-layout {
 	font-size: 1rem;
 }
 
-.main-default {
+.main-default.ant-layout-content {
 	display: flex;
 	flex-flow: column;
 	min-height: 100vh;

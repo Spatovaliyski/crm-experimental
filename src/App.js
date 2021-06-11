@@ -155,7 +155,7 @@ const Home = () => (
             </div>
             <div className="tile">
               <p>Submit your ticket information with us. <br />We will follow up with marketing and sales support to help you close the business.</p>
-              <a href="#" className="tickets-link button button-primary button-with-icon icon-cloud-upload">View Tickets</a>
+              <a href="/Tickets" className="tickets-link button button-primary button-with-icon icon-cloud-upload">View Tickets</a>
             </div>
           </aside>
         </Sider>
