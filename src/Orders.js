@@ -57,7 +57,7 @@ const columns = [
     key: "orderDate"
   },
   {
-    title: "Shipped",
+    title: "Processed",
     dataIndex: "shippedDate",
     key: "shippedDate"
   }

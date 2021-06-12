@@ -59,6 +59,7 @@ class ModalFormButton extends React.Component {
           item2Title = "Last Name"
           item3Title = "Phone Number"
           item4Title = "Email"
+          item5Title = "Membership"
           wrappedComponentRef={this.saveFormRef}
           visible={this.state.visible}
           onCancel={this.handleCancel}

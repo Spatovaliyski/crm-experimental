@@ -93,7 +93,7 @@ def deleteUser():
     # return redirect(url_for('default'))
 
 
-# Customers
+# Orders
 @app.route('/api/orders/', methods=["GET"])
 def getAllOrders():
     data = json.load(open(json_url))
