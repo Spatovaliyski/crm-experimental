@@ -31,7 +31,7 @@ class ModalFormButton extends React.Component {
       console.log('Received values of form: ', values);
       async function go(){
         try {
-          const response = await axios.post('/api/tickets/add/', values);
+          const response = await axios.post('/api/orders/add/', values);
           respData.push(response.data);
           return respData;
         }
@@ -54,7 +54,7 @@ class ModalFormButton extends React.Component {
       <div>
         <Button type="primary" onClick={this.showModal}>{this.props.buttonText}</Button>
         <ModalForm
-          title = "Add new Ticket"
+          title = "Add new Order"
           item1Title = "First Name"
           item2Title = "Last Name"
           item3Title = "Phone Number"

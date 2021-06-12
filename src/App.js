@@ -4,7 +4,8 @@ import "./App.css";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import { Row, Col } from "antd";
 import Contact from './Contact';
-import Tickets from './Tickets';
+import Customers from './Customers';
+import Orders from './Orders';
 import Statistics from './Statistics';
 import Nav from './Nav';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -37,8 +38,8 @@ function App() {
             <Switch>
               <Route exact path="/" component={Home} />  
               <Route path="/Contact" component={Contact} />    
-              <Route path="/Tickets" component={Tickets} />
-              <Route path="/Statistics" component={Statistics} />
+              <Route path="/Customers" component={Customers} />
+              <Route path="/Orders" component={Orders} />
               <Route path="/Login" component={Login} />
               <Route path="/Logout" component={Logout} />
             </Switch>

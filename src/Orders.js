@@ -1,7 +1,7 @@
 import React, { Component, Image } from "react";
 import update from "immutability-helper";
-import ModalFormButton from "./components/tickets/ModalFormButton";
-import TicketsTable from "./components/tickets/TicketsTable";
+import ModalFormButton from "./components/orders/ModalFormButton";
+import OrdersTable from "./components/orders/OrdersTable";
 //import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
@@ -14,63 +14,66 @@ const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
 
-// const displayAvatar = (avatar) => {
-//   const baseUrl = "./src/assets/img/";
-//   const imageName = require(baseUrl + avatar);
+const amountData = (amount) => {
+  return <p>${amount}</p>
+}
 
-//   return <img src={imageName} />
-// }
+const orderQuantity = (products) => {
+    return <p>{products.length}</p>
+}
+
+const customerName = (customerId) => {
+    return <p>{customerId}</p>
+}
 
 const columns = [
   {
-    title: "Avatar",
-    dataIndex: "avatar",
-    key: "avatar",
+    title: "Order Reference",
+    dataIndex: "reference",
+    key: "reference",
     //render: displayAvatar
   },
   {
-    title: "Ticket ID",
-    dataIndex: "id",
-    key: "id"
+    title: "Quantity",
+    dataIndex: "products",
+    key: "products",
+    render: orderQuantity
   },
   {
-    title: "First Name",
-    dataIndex: "firstname",
-    key: "firstname"
+    title: "Amount (p/pc)",
+    dataIndex: "amount",
+    key: "amount",
+    render: amountData
   },
   {
-    title: "Last Name",
-    dataIndex: "lastname",
-    key: "lastname"
+    title: "Customer",
+    dataIndex: "customerId",
+    key: "customerId",
+    render: customerName
   },
   {
-    title: "Mobile Phone",
-    dataIndex: "mobile",
-    key: "mobile"
+    title: "Order date",
+    dataIndex: "orderDate",
+    key: "orderDate"
   },
   {
-    title: "Email",
-    dataIndex: "email",
-    key: "email"
-  },
-  {
-    title: "Membership",
-    dataIndex: "membership",
-    key: "membership"
-  },
+    title: "Shipped",
+    dataIndex: "shippedDate",
+    key: "shippedDate"
+  }
 ];
 
 class App extends Component {
   state = {
-    tickets: []
+    orders: []
   };
 
-  handleChildFunc(newTicket) {
-    newTicket.then(respData => {
-      const newTickets = update(this.state.tickets, { $push: respData });
-      console.log(newTickets);
+  handleChildFunc(newOrder) {
+    newOrder.then(respData => {
+      const newOrders = update(this.state.orders, { $push: respData });
+      console.log(newOrders);
       const newState = Object.assign({}, this.state, {
-        tickets: newTickets
+        orders: newOrders
       });
       this.setState(newState);
     });
@@ -78,14 +81,14 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("/api/tickets")
+      .get("/api/orders")
       .then(response => {
-        const newTickets = response.data;
+        const newOrders = response.data;
 
         // create a new "State" object without mutating
         // the original State object.
         const newState = Object.assign({}, this.state, {
-          tickets: newTickets
+          orders: newOrders
         });
 
         // store the new state object in the component's state
@@ -101,7 +104,7 @@ class App extends Component {
         <Layout className="page-title-strip">
           <Content style={{ padding: "0 24px"}}>
               <Breadcrumb style={{ margin: "16px 0" }}>
-                  <Breadcrumb.Item>Tickets</Breadcrumb.Item>
+                  <Breadcrumb.Item>Orders</Breadcrumb.Item>
               </Breadcrumb>
           </Content>
         </Layout>
@@ -113,7 +116,7 @@ class App extends Component {
                 <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
                   <Row type="flex" justify="end" style={{ marginBottom: 10 }}>
                     <ModalFormButton
-                      buttonText="Create New Ticket"
+                      buttonText="Create New Order"
                       title="Title"
                       myFunc={this.handleChildFunc.bind(this)}
                     />
@@ -121,8 +124,8 @@ class App extends Component {
 
                   <Row>
                     <Col>
-                      <TicketsTable
-                        dataSource={this.state.tickets}
+                      <OrdersTable
+                        dataSource={this.state.orders}
                         columns={columns}
                       />
                     </Col>
