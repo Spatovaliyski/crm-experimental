@@ -53,16 +53,9 @@ def addUser():
 
 @app.route('/api/customers/delete/', methods=["DELETE"])
 def deleteUser():
-    """
-    Takes in the user's id to be deleted, redirect back to main page when done
-    :param deleteUserIDInput - user's ID
-    :return - redirect back to main page
-    """
-
     #Get new data from request
     json_data = request.get_json(force=True)
-    usersID = request.json['idsToDelete']
-    print usersID
+    usersID = json_data['idsToDelete']
 
     for i in range(0, len(usersID)):
         if usersID[i] == usersID:
@@ -70,23 +63,21 @@ def deleteUser():
             #Return found user
             return jsonify(usersID[i])
 
-    with open("data.json") as user_file:
-        data = json.load(user_file)
-    customers = data['customers']
-
     #Find user, if found make a new array without the index of the user and assign it to the JSON data
-    for i in range(0, len(customers)):
-
+    for i in range(0, len(usersID)):
+        # print("Cusomers ID:", customers[i]['id'])
+        # print("Users ID:", usersID)
         if customers[i]['id'] in usersID:
             customers.remove(customers[i])
+        else :
+            print("w/e")
 
     #Write new changes
-    with open("data.json", 'w') as user_file:
+    with open('data.json', 'w') as user_file:
         json.dump(data, user_file, indent=2)
 
     #Redirect to homepage
     return data
-
 
 # Orders
 @app.route('/api/orders/', methods=["GET"])
