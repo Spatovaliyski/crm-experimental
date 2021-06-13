@@ -61,36 +61,31 @@ def deleteUser():
 
     #Get new data from request
     json_data = request.get_json(force=True)
-    usersID = request.data
-    return usersID
+    usersID = request.json['idsToDelete']
+    print usersID
 
-    # for i in range(0, len(usersID)):
-    #     if usersID[i] == usersID:
-    #         found = True
-    #         #Return found user
-    #         return jsonify(usersID[i])
+    for i in range(0, len(usersID)):
+        if usersID[i] == usersID:
+            found = True
+            #Return found user
+            return jsonify(usersID[i])
 
-    #Load user data from db
-    # userFile = os.path.join(app.static_folder, '../data.json')
-    # with open(userFile) as user_file:
-    #     data = json.load(user_file)
-    # users = data['customers']
+    with open("data.json") as user_file:
+        data = json.load(user_file)
+    customers = data['customers']
 
-    # #Find user, if found make a new array without the index of the user and assign it to the JSON data
-    # for i in range(0, len(users)):
-    #     if users[i]['id'] == int(usersID):
-    #         newUsers = users[0:i]
-    #         newUsers += users[i + 1:len(users)]
+    #Find user, if found make a new array without the index of the user and assign it to the JSON data
+    for i in range(0, len(customers)):
 
-    #         data['customers'] = newUsers
-    #         data['total'] -= 1
+        if customers[i]['id'] in usersID:
+            customers.remove(customers[i])
 
-    # #Write new changes
-    # with open(userFile, 'w') as user_file:
-    #     json.dump(data, user_file, indent=2)
+    #Write new changes
+    with open("data.json", 'w') as user_file:
+        json.dump(data, user_file, indent=2)
 
-    # #Redirect to homepage
-    # return redirect(url_for('default'))
+    #Redirect to homepage
+    return data
 
 
 # Orders
