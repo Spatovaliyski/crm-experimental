@@ -51,7 +51,7 @@
   ], 
   "customers": [
     {
-      "avatar": "avatar3.png", 
+      "avatar": "./src/assets/img/avatar3.png", 
       "email": "abc@test.com", 
       "firstname": "Larsen", 
       "id": 2, 
@@ -61,7 +61,7 @@
       "rewards": 21
     }, 
     {
-      "avatar": "avatar4.png", 
+      "avatar": "./src/assets/img/avatar4.png", 
       "email": "test@test.com", 
       "firstname": "Rosseta", 
       "id": 4, 
@@ -71,7 +71,7 @@
       "rewards": 89
     }, 
     {
-      "avatar": "avatar2.png", 
+      "avatar": "./src/assets/img/avatar2.png", 
       "email": "test@test.com", 
       "firstname": "William", 
       "id": 5, 
@@ -81,7 +81,7 @@
       "rewards": 38
     }, 
     {
-      "avatar": "avatar1.png", 
+      "avatar": "./src/assets/img/avatar1.png", 
       "email": "test@test.com", 
       "firstname": "Sarah", 
       "id": 6, 
@@ -91,7 +91,7 @@
       "rewards": 23
     }, 
     {
-      "avatar": "avatar5.png", 
+      "avatar": "./src/assets/img/avatar5.png", 
       "email": "test@test.com", 
       "firstname": "Merriana", 
       "id": 8, 
@@ -101,7 +101,7 @@
       "rewards": 23
     }, 
     {
-      "avatar": "avatar1.png", 
+      "avatar": "./src/assets/img/avatar1.png", 
       "email": "test@test.com", 
       "firstname": "Jubino", 
       "id": 9, 
@@ -111,7 +111,7 @@
       "rewards": 26
     }, 
     {
-      "avatar": "avatar2.png", 
+      "avatar": "./src/assets/img/avatar2.png", 
       "email": "test@test.com", 
       "firstname": "Geneva", 
       "id": 10, 
@@ -121,7 +121,7 @@
       "rewards": 22
     }, 
     {
-      "avatar": "avatar5.png", 
+      "avatar": "./src/assets/img/avatar5.png", 
       "email": "test@test.com", 
       "firstname": "Mark", 
       "id": 11, 
@@ -131,7 +131,7 @@
       "rewards": 38
     }, 
     {
-      "avatar": "avatar1.png", 
+      "avatar": "./src/assets/img/avatar1.png", 
       "email": "test@test.com", 
       "firstname": "Yann", 
       "id": 12, 

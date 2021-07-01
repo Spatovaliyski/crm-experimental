@@ -14,20 +14,7 @@ const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
 
-// const displayAvatar = (avatar) => {
-//   const baseUrl = "./src/assets/img/";
-//   const imageName = require(baseUrl + avatar);
-
-//   return <img src={imageName} />
-// }
-
 const columns = [
-  {
-    title: "Avatar",
-    dataIndex: "avatar",
-    key: "avatar",
-    //render: displayAvatar
-  },
   {
     title: "Customer ID",
     dataIndex: "id",
@@ -107,10 +94,10 @@ class App extends Component {
         </Layout>
 
         <Layout>
-          <Content className="main" style={{ margin: "0 50px" }}>
+          <Content className="main" style={{ margin: "0 20px" }}>
             <Layout style={{ padding: "24px 0", background: "#fff" }}>
-              <Content style={{ padding: "0 24px", minHeight: 525 }}>
-                <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
+              <Content style={{ padding: "0 12px", minHeight: 525 }}>
+                <div style={{ background: "#fff", padding: 12, minHeight: 380 }}>
                   <Row type="flex" justify="end" style={{ marginBottom: 10 }}>
                     <ModalFormButton
                       buttonText="Add New Customer"

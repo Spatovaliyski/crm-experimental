@@ -26,7 +26,6 @@ const users = loginList.token.map(({access, user}) => {
 
 console.log(users);
 
-
 export default function Login({ setToken }) {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();

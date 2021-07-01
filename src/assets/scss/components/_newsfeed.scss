@@ -1,0 +1,44 @@
+
+.newsfeed {
+	margin: 2em 0;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+    &-post {
+        padding: 1.5em;
+        display: block;
+
+        margin-bottom: 2em;
+        border-radius: 4px;
+        background-color: #FFF;
+        border: 1px solid #e1e4e8;
+        transition: .2s ease;;
+    }
+
+    &-post:last-child {
+        margin-bottom: 0;
+    }
+
+    &-title {
+        color: #24292e;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+
+    &-content {
+        color: #444d56;
+        line-height: 1.6;
+        margin: 1em 0;
+    }
+
+    &-posted {
+        font-size: 0.75rem;
+        font-weight: 700;
+        font-style: normal;
+        color: #959da5;
+    }
+}

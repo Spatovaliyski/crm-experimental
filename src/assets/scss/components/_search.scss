@@ -1,0 +1,84 @@
+
+.search input {
+	background: #FFF;
+	border: 1px solid #405cad;
+	border-radius: 6px;
+	padding: .75rem 1em;
+	width: 100%;
+	max-width: 360px;
+	color: #03082e;
+
+    input::placeholder {
+        color: #03082e;
+        opacity: .6;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+
+    
+    &-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 4rem;
+    }
+}
+
+.faq {
+    &-boxes {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: -6em;
+    }
+    
+    &-box {
+        background: #FFF;
+        box-shadow: 0 0 6px -4px #000;
+        border-radius: 4px;
+        text-align: center;
+        margin: 0 1rem;
+        padding: 2rem 6em;
+    }
+    
+    &-box a {
+        display: block;
+    }
+    
+    &-box a:focus {
+        outline: none;
+    }
+    
+    &-box img {
+        margin-bottom: 1rem;
+        transition: .2s ease;
+    }
+    
+    &-box .faq-title {
+        font-weight: 300;
+    }
+    
+    &-box:hover img {
+        transform: translateY(-10px);
+    }
+    
+    &-list {
+        background: white;
+        border: 1px solid #e1e4e8;
+        max-width: 1084px;
+        margin: 0 auto;
+        padding: 3em;
+        margin-top: 3em
+    }
+    
+    &-item {
+        border-bottom: 1px solid #e1e4e8;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    &-item:last-child {
+        border: none;
+    }    
+}

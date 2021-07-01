@@ -34,7 +34,7 @@ function App() {
       <DefaultLayout>
         <Router>
             <Nav />
-
+            <div className="header-placeholder"></div>
             <Switch>
               <Route exact path="/" component={Home} />  
               <Route path="/Contact" component={Contact} />    
@@ -66,7 +66,7 @@ const Home = () => (
             <Content>
               <div className="home-container">
                 <Row gutter={24}>
-                  <Col span={8}>
+                  <Col md={8} sm={24} style={{ margin: "0 0 16px" }}>
                     <div className="statistics-box">
                       <div className="statistics-meta">
                         <h4>Revenue</h4>
@@ -75,7 +75,7 @@ const Home = () => (
                       </div>
                     </div>
                   </Col>
-                  <Col span={8}>
+                  <Col md={8} sm={24} style={{ margin: "0 0 16px" }}>
                     <div className="statistics-box">
                       <div className="statistics-meta">
                         <h4>Sales</h4>
@@ -84,7 +84,7 @@ const Home = () => (
                       </div>
                     </div>
                   </Col>
-                  <Col span={8}>
+                  <Col md={8} sm={24} style={{ margin: "0 0 16px" }}>
                     <div className="statistics-box">
                       <div className="statistics-meta">
                         <h4>Costs</h4>

@@ -34,6 +34,7 @@ def addUser():
     for i in range(0, len(customers)):
         currentIDs.append(customers[i]['id'])
 
+    # Provide new customer with all needed data
     user = {
         "id": max(currentIDs) + 1,
         "firstname": json_data["firstname"],
@@ -43,8 +44,10 @@ def addUser():
         "membership": 0,
     }
 
+    # Append to customers
     customers.append(user)
     
+    # Write new changes
     with open ('data.json', 'w') as f:
         json.dump(data, f, indent=2)
 
